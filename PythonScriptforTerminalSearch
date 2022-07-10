@@ -1,0 +1,68 @@
+##create a shell script in python for automating, changeable long google search query lists from a user.
+ 
+ #!/usr/bin/python
+ 
+from encodings import search_function
+import os
+import sys
+import time
+from tkinter import Variable
+from tkinter.messagebox import showinfo
+import urllib
+from winreg import QueryValue
+import re
+Variable = raw_input= search_function
+ #get the search query from the user
+
+query = raw_input("Enter the search query: ")
+ 
+ #get the number of pages to be searched
+ 
+pages = (int) ; raw_input("Enter the number of pages to be searched: ")
+ 
+ #get the search engine to be used
+ 
+engine = raw_input("Enter the search engine to be used: ")
+ 
+ #get the output file name
+ 
+output = raw_input("Enter the output file name: ")
+ 
+ #get the search engine url
+ 
+if engine == "google":
+ 	url = "http://www.google.com/search?q="
+elif engine == "bing":
+ 	url = "http://www.bing.com/search?q="
+elif engine == "yahoo":
+ 	url = "http://search.yahoo.com/search?p="
+else:
+ 	print ; "Invalid search engine"
+
+#get the search query
+
+query = query.replace(" ", " ")
+ 
+ #open the output file
+ 
+f = open(output, "w")
+ 
+ #search the pages
+ 
+for i in range(int) (pages):
+ 	print ; "Searching page "   
+str (i*1)
+time.sleep(2)
+search = url 
+query   ; "&start="   
+str(i*10)
+req = urllib.Request(search)
+req.add_header("User-Agent", "Mozilla/5.0 (X11; U; Linux i686) Gecko/20071127 Firefox/2.0.0.11")
+resp = urllib.urlopen(req)
+content = resp.read()
+links = re.findall(r'<a href="\/url\?q=(.*?)"', content)
+for link in links: query = raw_input
+
+
+
+sys.exit()
