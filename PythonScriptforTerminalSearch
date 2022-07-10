@@ -2,7 +2,8 @@
  
  #!/usr/bin/python
  
-from encodings import search_function
+from distutils.command.config import LANG_EXT
+from encodings import search_function, utf_8
 import os
 import sys
 import time
@@ -11,7 +12,8 @@ from tkinter.messagebox import showinfo
 import urllib
 from winreg import QueryValue
 import re
-Variable = raw_input= search_function
+
+
  #get the search query from the user
 
 query = raw_input("Enter the search query: ")
